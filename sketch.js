@@ -56,10 +56,11 @@ function draw() {
   if(gameState == PLAY) {
     restart.visible = false;
     gOver.visible = false;
-    //jump when the space key is pressed
-    if(keyDown("space")) {
-        hbird.velocityY = -8;
-    }
+   var jump = createButton("JUMP");
+  jump.position(650,100);
+  if(jump.mousePressed(function(){
+    hbird.velocityY = -8;
+  }));
   //adding gravity
   hbird.velocityY = hbird.velocityY + 0.6
     //score
