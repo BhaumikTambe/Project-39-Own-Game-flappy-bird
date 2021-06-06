@@ -56,7 +56,8 @@ function draw() {
   if(gameState == PLAY) {
     restart.visible = false;
     gOver.visible = false;
-   var jump = createButton("JUMP");
+    
+  var jump = createButton("JUMP");
   jump.position(650,100);
   if(jump.mousePressed(function(){
     hbird.velocityY = -8;
